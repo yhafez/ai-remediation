@@ -6,7 +6,7 @@ const Section = ({
 }: {
   header: string;
   headerLevel?: number;
-  attributes?: string[];
+  attributes?: string[] | React.ReactNode[];
   description?: string;
   children: React.ReactNode;
 }) => {

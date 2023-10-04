@@ -21,7 +21,8 @@ import {
   Section,
   Header,
   AccordionAriaExpandedParent,
-  AccordionAriaExpandedChild
+  AccordionAriaExpandedChild,
+  ButtonAriaSelected
 } from './components';
 import './App.css';
 
@@ -162,6 +163,29 @@ const accordionSections = [
   }
 ];
 
+const buttonSelections = [
+  {
+    header: 'aria-selected',
+    attributes: ['aria-selected'],
+    description: (
+      <span>
+        should not be used to represent a toggled button's state. Use{' '}
+        <code
+          style={{
+            padding: '0.25em 0.25em',
+            borderRadius: '0.25em',
+            backgroundColor: 'rgba(255, 255, 255, 0.3)'
+          }}
+        >
+          aria-pressed
+        </code>{' '}
+        instead.
+      </span>
+    ),
+    component: <ButtonAriaSelected />
+  }
+];
+
 function App() {
   return (
     <>
@@ -180,6 +204,17 @@ function App() {
       <h2>Common UI Patterns</h2>
       <h3>Accordions</h3>
       {accordionSections.map((section, index) => (
+        <Section
+          key={index}
+          header={section.header}
+          attributes={section.attributes}
+          description={section.description}
+        >
+          {section.component}
+        </Section>
+      ))}
+      <h3>Buttons</h3>
+      {buttonSelections.map((section, index) => (
         <Section
           key={index}
           header={section.header}

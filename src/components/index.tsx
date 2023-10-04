@@ -21,6 +21,7 @@ import Section from './Section';
 import Header from './Header';
 import AccordionAriaExpandedParent from './patterns/accordions/AccordionAriaExpandedParent';
 import AccordionAriaExpandedChild from './patterns/accordions/AccordionAriaExpandedChild';
+import ButtonAriaSelected from './patterns/buttons/ButtonAriaSelected';
 
 export {
   AriaActiveDescendant,
@@ -45,5 +46,6 @@ export {
   Section,
   Header,
   AccordionAriaExpandedParent,
-  AccordionAriaExpandedChild
+  AccordionAriaExpandedChild,
+  ButtonAriaSelected
 };
