@@ -1,3 +1,3 @@
-const AriaLevel = () => <div aria-level='3'>This is a div element</div>
+const AriaLevel = () => <div aria-level={3}>This is a div element</div>;
 
-export default AriaLevel
+export default AriaLevel;
