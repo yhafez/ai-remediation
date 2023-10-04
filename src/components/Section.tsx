@@ -6,8 +6,8 @@ const Section = ({
 }: {
   header: string;
   headerLevel?: number;
-  attributes?: string[] | React.ReactNode[];
-  description?: string;
+  attributes?: string[];
+  description?: string | React.ReactNode;
   children: React.ReactNode;
 }) => {
   return (
@@ -32,16 +32,7 @@ const Section = ({
           attributes.length &&
           attributes.map((attribute, index) => (
             <>
-              <code
-                key={index}
-                style={{
-                  padding: '0.25em 0.25em',
-                  borderRadius: '0.25em',
-                  backgroundColor: 'rgba(255, 255, 255, 0.3)'
-                }}
-              >
-                {attribute}
-              </code>
+              <code key={index}>{attribute}</code>
               {index < attributes.length - 2 ? ', ' : ''}
               {index === attributes.length - 2 ? ' and ' : ''}
             </>

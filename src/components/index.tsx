@@ -22,6 +22,7 @@ import Header from './Header';
 import AccordionAriaExpandedParent from './patterns/accordions/AccordionAriaExpandedParent';
 import AccordionAriaExpandedChild from './patterns/accordions/AccordionAriaExpandedChild';
 import ButtonAriaSelected from './patterns/buttons/ButtonAriaSelected';
+import Carousel from './patterns/carousel/Carousel';
 
 export {
   AriaActiveDescendant,
@@ -47,5 +48,6 @@ export {
   Header,
   AccordionAriaExpandedParent,
   AccordionAriaExpandedChild,
-  ButtonAriaSelected
+  ButtonAriaSelected,
+  Carousel
 };

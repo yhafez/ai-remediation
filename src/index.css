@@ -61,3 +61,9 @@ section {
   padding-bottom: 2em;
   border-bottom: 1px solid #e0e0e0;
 }
+
+code {
+  padding: 0.25em 0.25em;
+  border-radius: 0.25em;
+  background: rgba(255, 255, 255, 0.3);
+}

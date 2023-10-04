@@ -22,7 +22,8 @@ import {
   Header,
   AccordionAriaExpandedParent,
   AccordionAriaExpandedChild,
-  ButtonAriaSelected
+  ButtonAriaSelected,
+  Carousel
 } from './components';
 import './App.css';
 
@@ -170,19 +171,25 @@ const buttonSelections = [
     description: (
       <span>
         should not be used to represent a toggled button's state. Use{' '}
-        <code
-          style={{
-            padding: '0.25em 0.25em',
-            borderRadius: '0.25em',
-            backgroundColor: 'rgba(255, 255, 255, 0.3)'
-          }}
-        >
-          aria-pressed
-        </code>{' '}
-        instead.
+        <code>aria-pressed</code> instead.
       </span>
     ),
     component: <ButtonAriaSelected />
+  }
+];
+
+const basicCarouselSections = [
+  {
+    header: 'aria-posinset/aria-setsize',
+    attributes: ['aria-posinset', 'aria-setsize'],
+    description: (
+      <span>
+        should not be used to represent slides in a basic carousel. Use{' '}
+        <code>aria-roledescription="slide"</code> instead with{' '}
+        <code>aria-label</code>/<code>aria-labelledby </code> instead.
+      </span>
+    ),
+    component: <Carousel />
   }
 ];
 
@@ -215,6 +222,22 @@ function App() {
       ))}
       <h3>Buttons</h3>
       {buttonSelections.map((section, index) => (
+        <Section
+          key={index}
+          header={section.header}
+          attributes={section.attributes}
+          description={section.description}
+        >
+          {section.component}
+        </Section>
+      ))}
+      <h3>Carousels</h3>
+      <h4>
+        <a href="https://www.w3.org/WAI/ARIA/apg/patterns/carousel/#wai-ariaroles,states,andproperties">
+          Basic Carousel
+        </a>
+      </h4>
+      {basicCarouselSections.map((section, index) => (
         <Section
           key={index}
           header={section.header}
