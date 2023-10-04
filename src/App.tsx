@@ -2,14 +2,21 @@ import {
   AriaActiveDescendant,
   AriaAutoComplete,
   AriaChecked,
+  AriaCol,
   AriaExpanded,
   AriaLevel,
+  AriaModal,
   AriaMultiline,
+  AriaMultiSelectable,
   AriaOrientation,
+  AriaPosinsetSetsize,
   AriaPressed,
   AriaReadOnly,
   AriaRequired,
+  AriaRow,
   AriaSelected,
+  AriaSetsize,
+  AriaSort,
   AriaValue,
   Section,
   Header
@@ -37,6 +44,12 @@ const sections = [
     component: <AriaChecked />
   },
   {
+    header: 'aria-col',
+    attributes: ['aria-colcount', 'aria-colindex'],
+    description: 'should only be applied to table cell elements',
+    component: <AriaCol />
+  },
+  {
     header: 'aria-expanded',
     attributes: ['aria-expanded'],
     description:
@@ -50,16 +63,34 @@ const sections = [
     component: <AriaLevel />
   },
   {
+    header: 'aria-modal',
+    attributes: ['aria-modal'],
+    description: 'should only be applied to dialog elements',
+    component: <AriaModal />
+  },
+  {
     header: 'aria-multiline',
     attributes: ['aria-multiline'],
     description: 'should only be applied to textbox elements',
     component: <AriaMultiline />
   },
   {
+    header: 'aria-multiselectable',
+    attributes: ['aria-multiselectable'],
+    description: 'should only be applied to listbox, grid, or tablist elements',
+    component: <AriaMultiSelectable />
+  },
+  {
     header: 'aria-orientation',
     attributes: ['aria-orientation'],
     description: 'should only be applied to elements that support it',
     component: <AriaOrientation />
+  },
+  {
+    header: 'aria-posinset/aria-setsize',
+    attributes: ['aria-posinset', 'aria-setsize'],
+    description: 'should only be applied to elements that support it',
+    component: <AriaPosinsetSetsize />
   },
   {
     header: 'aria-pressed',
@@ -81,10 +112,28 @@ const sections = [
     component: <AriaRequired />
   },
   {
+    header: 'aria-row',
+    attributes: ['aria-rowcount', 'aria-rowindex'],
+    description: 'should only be applied to table cell elements',
+    component: <AriaRow />
+  },
+  {
     header: 'aria-selected',
     attributes: ['aria-selected'],
     description: 'should only be applied to selectable elements',
     component: <AriaSelected />
+  },
+  {
+    header: 'aria-setsize',
+    attributes: ['aria-setsize'],
+    description: 'should only be applied to elements that support it',
+    component: <AriaSetsize />
+  },
+  {
+    header: 'aria-sort',
+    attributes: ['aria-sort'],
+    description: 'should only be applied to gridcells or column headers',
+    component: <AriaSort />
   },
   {
     header: 'aria-value',

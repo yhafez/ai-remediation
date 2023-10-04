@@ -41,7 +41,7 @@ const Section = ({
               >
                 {attribute}
               </code>
-              {index < attributes.length - 1 ? ', ' : ''}
+              {index < attributes.length - 2 ? ', ' : ''}
               {index === attributes.length - 2 ? ' and ' : ''}
             </>
           ))}
