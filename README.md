@@ -1,27 +1,62 @@
-# React + TypeScript + Vite
+# React TypeScript Vite App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project showcases the use of React, TypeScript, Vite, and PNPM. It also demonstrates common examples of WCAG accessibility violations related to ARIA attributes.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Make sure you have Node.js, PNPM, and Vercel CLI installed on your machine.
 
-## Expanding the ESLint configuration
+## Getting started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+git clone https://github.com/yhafez/ai-remediation.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Navigate into the directory:
+
+```bash
+cd ai-remediation
+```
+
+3. Install the dependencies:
+
+```bash
+pnpm install
+```
+
+## Running the application locally
+
+Use the following command to start the development server:
+
+```bash
+pnpm dev
+```
+
+## Building the application
+
+To build the application for production, use the following command:
+
+```bash
+pnpm build
+```
+
+## Deploying the application on Vercel
+
+Ensure you've installed Vercel CLI globally and logged in:
+
+```bash
+npm i -g vercel
+vercel login
+```
+
+To deploy your project, run:
+
+```bash
+vercel
+```
+
+## WCAG Accessibility Violations
+
+This project contains examples of common scenarios where "Elements must only use allowed ARIA attributes" WCAG accessibility violation occurs. Make sure to refer to the ARIA documentation for proper usage.
