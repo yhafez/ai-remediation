@@ -1,24 +1,26 @@
-import AriaActiveDescendant from './AriaActiveDescendant';
-import AriaAutoComplete from './AriaAutoComplete';
-import AriaChecked from './AriaChecked';
-import AriaCol from './AriaCol';
-import AriaExpanded from './AriaExpanded';
-import AriaLevel from './AriaLevel';
-import AriaModal from './AriaModal';
-import AriaMultiline from './AriaMultiline';
-import AriaMultiSelectable from './AriaMultiSelectable';
-import AriaOrientation from './AriaOrientation';
-import AriaPosinsetSetsize from './AriaPosinetSetSize';
-import AriaPressed from './AriaPressed';
-import AriaReadOnly from './AriaReadOnly';
-import AriaRequired from './AriaRequired';
-import AriaRow from './AriaRow';
-import AriaSelected from './AriaSelected';
-import AriaSetsize from './AriaSetSize';
-import AriaSort from './AriaSort';
-import AriaValue from './AriaValue';
+import AriaActiveDescendant from './simple/AriaActiveDescendant';
+import AriaAutoComplete from './simple/AriaAutoComplete';
+import AriaChecked from './simple/AriaChecked';
+import AriaCol from './simple/AriaCol';
+import AriaExpanded from './simple/AriaExpanded';
+import AriaLevel from './simple/AriaLevel';
+import AriaModal from './simple/AriaModal';
+import AriaMultiline from './simple/AriaMultiline';
+import AriaMultiSelectable from './simple/AriaMultiSelectable';
+import AriaOrientation from './simple/AriaOrientation';
+import AriaPosinsetSetsize from './simple/AriaPosinetSetSize';
+import AriaPressed from './simple/AriaPressed';
+import AriaReadOnly from './simple/AriaReadOnly';
+import AriaRequired from './simple/AriaRequired';
+import AriaRow from './simple/AriaRow';
+import AriaSelected from './simple/AriaSelected';
+import AriaSetsize from './simple/AriaSetSize';
+import AriaSort from './simple/AriaSort';
+import AriaValue from './simple/AriaValue';
 import Section from './Section';
 import Header from './Header';
+import AccordionAriaExpandedParent from './patterns/accordions/AccordionAriaExpandedParent';
+import AccordionAriaExpandedChild from './patterns/accordions/AccordionAriaExpandedChild';
 
 export {
   AriaActiveDescendant,
@@ -41,5 +43,7 @@ export {
   AriaSort,
   AriaValue,
   Section,
-  Header
+  Header,
+  AccordionAriaExpandedParent,
+  AccordionAriaExpandedChild
 };

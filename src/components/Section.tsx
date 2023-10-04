@@ -5,13 +5,14 @@ const Section = ({
   children
 }: {
   header: string;
+  headerLevel?: number;
   attributes?: string[];
   description?: string;
   children: React.ReactNode;
 }) => {
   return (
     <section>
-      <h2
+      <p
         style={{
           marginTop: '0.75em',
           marginBottom: '0.25em',
@@ -20,7 +21,7 @@ const Section = ({
         }}
       >
         {header}
-      </h2>
+      </p>
       <div
         style={{
           marginTop: 0,

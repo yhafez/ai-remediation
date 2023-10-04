@@ -19,11 +19,13 @@ import {
   AriaSort,
   AriaValue,
   Section,
-  Header
+  Header,
+  AccordionAriaExpandedParent,
+  AccordionAriaExpandedChild
 } from './components';
 import './App.css';
 
-const sections = [
+const simpleSections = [
   {
     header: 'aria-activedescendant',
     attributes: ['aria-activedescendant'],
@@ -143,11 +145,41 @@ const sections = [
   }
 ];
 
+const accordionSections = [
+  {
+    header: 'aria-expanded',
+    attributes: ['aria-expanded'],
+    description:
+      'should be applied to button elements and not the parent container',
+    component: <AccordionAriaExpandedParent />
+  },
+  {
+    header: 'aria-expanded',
+    attributes: ['aria-expanded'],
+    description:
+      'should be applied to button elements and not the expanded child',
+    component: <AccordionAriaExpandedChild />
+  }
+];
+
 function App() {
   return (
     <>
       <Header />
-      {sections.map((section, index) => (
+      <h2>Simple Examples</h2>
+      {simpleSections.map((section, index) => (
+        <Section
+          key={index}
+          header={section.header}
+          attributes={section.attributes}
+          description={section.description}
+        >
+          {section.component}
+        </Section>
+      ))}
+      <h2>Common UI Patterns</h2>
+      <h3>Accordions</h3>
+      {accordionSections.map((section, index) => (
         <Section
           key={index}
           header={section.header}
